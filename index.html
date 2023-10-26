@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mnie</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .interests {
+            background-color: #333;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <div class="container">
+        <p>
+            Hi there! I'm a 16-year-old who's passionate about a few things. Let me tell you a bit about myself.
+        </p>
+        <div class="interests">
+            <h2>My Interests</h2>
+            <p>
+                I'm a huge basketball fan, both watching and playing. I also love video games and enjoy programming. These are some of the things that keep me busy and excited every day.
+            </p>
+        </div>
+    </div>
+    <script>
+        // Dodajmy kilka efektów JavaScript
+        const header = document.querySelector('header');
+        header.addEventListener('mouseenter', () => {
+            header.style.backgroundColor = '#444';
+        });
+
+        header.addEventListener('mouseleave', () => {
+            header.style.backgroundColor = '#222';
+        });
+
+        const interests = document.querySelector('.interests');
+        interests.addEventListener('mouseenter', () => {
+            interests.style.backgroundColor = '#444';
+        });
+
+        interests.addEventListener('mouseleave', () => {
+            interests.style.backgroundColor = '#333';
+        });
+    </script>
+</body>
+</html>
