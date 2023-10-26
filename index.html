@@ -21,6 +21,7 @@
 
         h1 {
             font-size: 36px;
+            animation: pulse 1s infinite alternate;
         }
 
         p {
@@ -36,10 +37,32 @@
         .interests {
             background-color: #333;
             padding: 20px;
+            animation: blink 1s infinite;
         }
 
         h2 {
             font-size: 24px;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                background-color: #444;
+            }
+            50% {
+                background-color: #555;
+            }
+            100% {
+                background-color: #444;
+            }
         }
     </style>
 </head>
@@ -59,23 +82,14 @@
         </div>
     </div>
     <script>
-        // Dodajmy kilka efektów JavaScript
-        const header = document.querySelector('header');
-        header.addEventListener('mouseenter', () => {
-            header.style.backgroundColor = '#444';
+        // Dodatkowy JavaScript, który dodaje efekty i animacje
+        const container = document.querySelector('.container');
+        container.addEventListener('mouseover', () => {
+            container.style.transform = 'rotate(5deg)';
         });
 
-        header.addEventListener('mouseleave', () => {
-            header.style.backgroundColor = '#222';
-        });
-
-        const interests = document.querySelector('.interests');
-        interests.addEventListener('mouseenter', () => {
-            interests.style.backgroundColor = '#444';
-        });
-
-        interests.addEventListener('mouseleave', () => {
-            interests.style.backgroundColor = '#333';
+        container.addEventListener('mouseout', () => {
+            container.style.transform = 'rotate(0deg)';
         });
     </script>
 </body>
